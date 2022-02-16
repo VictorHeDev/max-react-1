@@ -10,9 +10,14 @@ import Button from '../UI/Button';
 const AddUser = (props) => {
   const [enteredUsername, setEnteredUsername] = useState('');
   const [enteredAge, setEnteredAge] = useState('');
+  const [user, setUser] = useState({});
 
   const addUserHandler = (e) => {
     e.preventDefault();
+    console.log(enteredUsername, enteredAge);
+
+    setEnteredUsername('');
+    setEnteredAge('');
   };
 
   const usernameChangeHandler = (e) => {
