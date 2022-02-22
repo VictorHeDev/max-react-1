@@ -10,7 +10,6 @@ import Button from '../UI/Button';
 const AddUser = (props) => {
   const [enteredUsername, setEnteredUsername] = useState('');
   const [enteredAge, setEnteredAge] = useState('');
-  const [user, setUser] = useState({});
 
   const addUserHandler = (e) => {
     e.preventDefault();
@@ -22,6 +21,8 @@ const AddUser = (props) => {
     if (+enteredAge < 1) {
       return;
     }
+
+    props.onAddUser(enteredUsername, enteredAge);
 
     setEnteredUsername('');
     setEnteredAge('');
