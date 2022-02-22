@@ -38,7 +38,7 @@ const AddUser = (props) => {
   };
 
   return (
-    <>
+    <div>
       <ErrorModal title='An error occurred!' message='Something went wrong!' />
       <Card className={classes.input}>
         <form action='' onSubmit={addUserHandler}>
@@ -59,7 +59,7 @@ const AddUser = (props) => {
           <Button type='submit'>Add User</Button>
         </form>
       </Card>
-    </>
+    </div>
   );
 };
 
